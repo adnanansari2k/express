@@ -6,7 +6,7 @@ database.loadDatabase()
 const timestamp = Date.now()
 
 const app = express()
-app.listen(3000)
+app.listen(process.env.PORT || 3000)
 app.use(express.static("public"))
 app.use(bodyParser.json()) 
 app.post("/api",(request, response)=> {
